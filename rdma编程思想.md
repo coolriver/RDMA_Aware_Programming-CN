@@ -23,5 +23,13 @@ RDMA网络编程用户手册1.4版
 的待加数的和。</td></tr>
 <tr><td>GUID(Globally Unique IDentifier)</td><td>在一个子网中，唯一标志一个设备或组件的
 64bit数字</td></tr>
-<tr><td>GID(Global IDentifier)</td><td></td></tr>
+<tr><td>GID(Global IDentifier)</td><td>一个128位的标志，用来标志网络适配器上的一个端口，
+路由器上或者组播里的一个端口;为了更有效地寻找、通信和路由，IBA在标准IPV6地址的基础上定义了一些额外的
+特性和约束，这就形成了GID。</td></tr>
+<tr><td>GRH(Global Routing Header)</td><td>用来在子网间传递数据包和传递组播信息的包头。
+包头基于IPv6协议</td></tr>
+<tr><td>Network Adapter</td><td>允许网络中计算机之间传递数据的硬件。</td></tr>
+<tr><td>Host</td><td>一台装运行着操作系统，并且控制着一个或多个network adapter的计算机。</td></tr>
+<tr><td>IB</td><td>InfiniBand</td></tr>
+<tr><td> </td><td> </td></tr>
 </table>
