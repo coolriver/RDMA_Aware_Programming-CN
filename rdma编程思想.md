@@ -49,5 +49,12 @@ MGID唯一标志一个IB多播组，它由SM管理。SM将每个MGID都关联一个MLID，并对网络中的IB
 已被注册为被允许使用的连续内存缓冲区。为了使网络适配器能利用它们，这些缓冲区需要先被
 注册。在注册期间，一个L_Key和R_Key被创建出来用来关联相应的注册缓冲区。</td></tr>
 <tr><td>MTU(Maximum Transfer Unit)</td><td>
-</td></tr>
+端口收发数据包的最大有效负载的数据大小（不包括包头）限度。</td></tr>
+<tr><td>MW(Memory Window)</td><td>
+一个被分配的资源，在与已注册的内存中一块特定的区域绑定后，能被远程直接使用。每个MW都有一个
+关联的窗口句柄、一些使用权限信息和当前的R_Key</td></tr>
+<tr><td>Outstanding Work Request</td><td>
+工作队列中没有被轮询到已完成的WR</td></tr>
+<tr><td>pkey(Partition key)</td><td>
+工作队列中没有被轮询到已完成的WR</td></tr>
 </table>
