@@ -56,5 +56,14 @@ MGID唯一标志一个IB多播组，它由SM管理。SM将每个MGID都关联一个MLID，并对网络中的IB
 <tr><td>Outstanding Work Request</td><td>
 工作队列中没有被轮询到已完成的WR</td></tr>
 <tr><td>pkey(Partition key)</td><td>
-工作队列中没有被轮询到已完成的WR</td></tr>
+pkey标志了端口所属的分区。pkey大概类似于以太网中的VLAN ID。pkey用来指向端口的
+pkey表中的一项。SM(subnet manager)将每个端口至少关联一个pkey</td></tr>
+<tr><td>PD(Protection Domain)</td><td>
+只有内部成员才能进行交互的域。AH与QP进行交互，MR与WQ进行交互。</td></tr>
+<tr><td>QP(Queue Pair)</td><td>
+为了在网络中节点之间传递数据，将独立的WQ打包在一起形成的一个配对
+（发送队列和接收队列）。有三种类型的QP：UD 不可靠数据报，UC 不可靠连接，RC 
+可靠连接。</td></tr>
+<tr><td>RC(Reliable Connection)</td><td>
+基于面向连连接的QP传输服务。</td></tr>
 </table>
