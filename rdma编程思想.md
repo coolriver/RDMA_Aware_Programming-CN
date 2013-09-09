@@ -76,5 +76,47 @@ pkey表中的一项。SM(subnet manager)将每个端口至少关联一个pkey</td></tr>
 <tr><td>Requestor</td><td>
 在一个连接中，发起数据传输的一端（通过发送一个请求）</td></tr>
 <tr><td>Responder</td><td>
+在一个连接中，回复发起者发送的请求命令的的一端。请求命令可能包括
+对回复者内存进行读或写的请求，和要求回复者接收一条信息。</td></tr>
+<tr><td>rkey</td><td>
+在MR注册之后接收到的一个数字,对到来的RDMA操作进行许可认证。</td></tr>
+<tr><td>RNR(Receiver Not Ready)</td><td>
+在一个基于RC的QP中，两端的连接已经存在，但是RR目前不在接收端。</td></tr>
+<tr><td>RQ(Receive Queue)</td><td>
+一个用来存储用户发送的RR的工作队列。</td></tr>
+<tr><td>RR(Receive Request)</td><td>
+是一个会被发送到RQ中的WR。它描述了应该把到来的需要写的数据写在哪里。
+需要注意的是，一个RDMA写操作会消耗一个RR。</td></tr>
+<tr><td>RTR(Ready To Receive)</td><td>
+一种QP的状态，它表示某个RR可以被发送和处理。</td></tr>
+<tr><td>RTS(Ready To Send)</td><td>
+一种QP的状态，它表示某个SR可以被发送和处理。</td></tr>
+<tr><td>SA(Subnet Administrator)</td><td>
+用来查询和操作子网管理数据的接口。</td></tr>
+<tr><td>SGE(Scatter/Gather Elements)</td><td>
+一个结构，指向本地已注册过的内存块的一部分或者整块。结构中的元素包含
+内存块的起始地址、大小和lkey（和它相关的权限信息一起）。</td></tr>
+<tr><td>S/G Array</td><td>
+在WR里，存放S/G元素的元组。根据使用的操作命令，可以将不同缓冲区的数据收集起来，
+并将这些数据当成一个单独的数据流进行发送，或者将一个单独的数据流切分成许多不同的
+缓冲区。</td></tr>
+<tr><td>SM(Subnet Manager)</td><td>
+设置和管理子网的体系。它的功能包括：获知子网的网络拓扑结构，分配LID，
+决定路由策略和设置路由表，一个主的SM或者还有一个从的SM（双机热备模式）,
+初始化子网中交换机的路由表从而在子网中建立网络通路。</td></tr>
+<tr><td>SQ(Send Queue)</td><td>
+用来存储用户发送的SR的队列。</td></tr>
+<tr><td>SR(Send Request)</td><td>
+是一个会被发送到SQ中的WR，描述了需要传输的数据有多大、数据的目标位置以及传输的方式
+（具体的操作码会确定传输方式）。</td></tr>
+<tr><td>SRQ(Share Receive Queue)</td><td>
+是一个保存着接收到的信息的WQE队列，接收到的信息可以来自于任何相关的RC/UC/UD QP.
+多个QP可与同一个SRQ关联。</td></tr>
+<tr><td>TCA(Target Channel Adapter)</td><td>
+一个不需要支持verb语法的通道适配器，通常用在I/O设备中。</td></tr>
+<tr><td>UC(Unreliable Connection)</td><td>
+基于面向连接的QP传输服务，一个QP和另一个QP相联系。QP们没有执行可靠协议，传输过程中
+信息可能丢失。</td></tr>
+<tr><td>UD(Unreliable Connection)</td><td>
 </td></tr>
 </table>
