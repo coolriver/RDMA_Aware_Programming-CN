@@ -133,3 +133,8 @@ SQ或RQ中的一种。</td></tr>
 <tr><td>WR(Work Request)</td><td>
 用户提交至WQ（工作队列）的一个请求。</td></tr>
 </table>
+
+###1 RDMA体系结构概述
+####1.1 InfiniBand
+	InfiniBand(IB)是一种服务器和存储器的互联技术，它具有高速、低延迟、低CPU负载、
+高效率并且可扩展的特性。
