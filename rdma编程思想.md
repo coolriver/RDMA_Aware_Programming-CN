@@ -65,5 +65,16 @@ pkey表中的一项。SM(subnet manager)将每个端口至少关联一个pkey</td></tr>
 （发送队列和接收队列）。有三种类型的QP：UD 不可靠数据报，UC 不可靠连接，RC 
 可靠连接。</td></tr>
 <tr><td>RC(Reliable Connection)</td><td>
-基于面向连连接的QP传输服务。</td></tr>
+基于面向连连接的QP传输服务。一个QP与另一个QP相关联，两者之间的信息传输是可靠的
+（具体体现在数据的正确性和顺序性）</td></tr>
+<tr><td>RDMA(Remote Direct Memory Access)</td><td>
+在不需远程计算机CPU的干预下，对它的内存进行操作。</td></tr>
+<tr><td>RDMA_CM(Remote Direct Memory Access Communication Manager)</td><td>
+用来建立可靠性连接和不可靠性数据报传输的API。它为建立连接提供了RDMA传输接口。
+此API基于套接字，同时又适用于基于QP的语义：信息传递必须通过专门的RDMA设备，
+并且数据传输是基于消息机制。</td></tr>
+<tr><td>Requestor</td><td>
+在一个连接中，发起数据传输的一端（通过发送一个请求）</td></tr>
+<tr><td>Responder</td><td>
+</td></tr>
 </table>
