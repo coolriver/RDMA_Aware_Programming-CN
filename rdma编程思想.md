@@ -118,5 +118,18 @@ pkey表中的一项。SM(subnet manager)将每个端口至少关联一个pkey</td></tr>
 基于面向连接的QP传输服务，一个QP和另一个QP相联系。QP们没有执行可靠协议，传输过程中
 信息可能丢失。</td></tr>
 <tr><td>UD(Unreliable Connection)</td><td>
-</td></tr>
+一种QP传输服务，消息的以包为单位。每个UD QP能和子网中其它的UD QP进行数据的接收和发送。
+消息在传递的过程中可能会丢失并且到达顺序可能会混乱。UD QP是唯一支持多播消息的模式。
+UD数据包的大小受限于MTU</td></tr>
+<tr><td>Verbs</td><td>
+网络适配器的功能的一种抽象描述。使用Verbs,任何应用都能创建和管理用于RDMA数据传输的
+对象。</td></tr>
+<tr><td>VPI(Virtual Protocol Interface)</td><td>
+允许用户能够改变端口的2层协议。</td></tr>
+<tr><td>WQ(Work Queue)</td><td>
+SQ或RQ中的一种。</td></tr>
+<tr><td>WQE(Work Queue Element)</td><td>
+读音为"wookie"，是WQ（工作队列）中的一个元素。</td></tr>
+<tr><td>WR(Work Request)</td><td>
+用户提交至WQ（工作队列）的一个请求。</td></tr>
 </table>
