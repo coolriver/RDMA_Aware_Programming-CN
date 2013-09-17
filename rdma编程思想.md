@@ -249,8 +249,8 @@ RDS ULPs。存储型的应用可以利用iSER,SRP,RDS,NFS,ZFS,SMB等等。MPI和
 但不在本文讨论范围之内。
 
 ####1.7参考条目
-*	[IBTA Intro to IB for End Users](http://members.infinibandta.org/kws pub/Intro_to_IB_for_End_Users.pdf)
-*	[Mellanox InfiniBandFAQ_FQ_100.pdf](http://www.mellanox.co m/pdf/whitepapers/InfiniBandFAQ_FQ_100.pdf)
+*	[IBTA Intro to IB for End Users](http://members.infinibandta.org/kwspub/Intro_to_IB_for_End_Users.pdf)
+*	[Mellanox InfiniBandFAQ_FQ_100.pdf](http://www.mellanox.com/pdf/whitepapers/InfiniBandFAQ_FQ_100.pdf)
 *	[Mellanox WP_2007_IB_Software_and_Protocols.pdf](http://www.mellanox.com/pdf/whitepapers/WP_2007_IB_Software_and_Protocols.pdf)
 *	Mellanox的驱动和固件可以在Mellanox的技术网站上下载：[http://www.mellanox.com](http://www.mellanox.com)
 
