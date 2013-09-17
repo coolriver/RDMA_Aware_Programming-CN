@@ -229,3 +229,29 @@ HCA。相同地利用这种地址翻译机制，HCA能够在用户态程序下�
 虚拟地址进行操作，HCA能将这些虚拟地址翻译为物理地址，这样就实现了消息的有效传输。
 
 #####Range Extenders
+IB将传输通路加入到WAN中，来实现范围的网络范围的扩展。同时，增加了足够的buffer credit
+(BBC)来确保在WAN上能够满带宽运行。
+
+#####Subnet Manager
+IB子网管理器给每个连接到子网中的端口分配一个局部的ID（LID），并且基于这些LID，构建了一
+个路由表。IB子网管理器是一个软件定义网络（SDN）的概念，SDN能够消除网络连接的复杂性，使
+创建超大规模的计算和存储体系成为可能。
+
+#####Switches
+IB交换机与标准的网络中的交换中在概念上是相似的，但它的设计是为了迎合IB的性能需求。IB交
+换机在IB的链路层实施了流控制，一是为了防止数据包的丢失，二是为了支持拥塞控制和自适应路
+由，同时也为了保证良好的服务质量。很多IB交换机都包含一个子网管理器。配置一个IB网络，
+至少需要一个子网管理器。
+
+####1.6对现有应用的支持和ULPs（Upper Layer Protocols 上层协议）
+基于IP的应用可以在IB网络中运行，需要用到IP over IB(IPoIB)或者Ethernet over IB(EoIB)或者
+RDS ULPs。存储型的应用可以利用iSER,SRP,RDS,NFS,ZFS,SMB等等。MPI和网络管理也是支持的ULPs,
+但不在本文讨论范围之内。
+
+####1.7参考条目
+*	[IBTA Intro to IB for End Users](http://members.infinibandta.org/kws pub/Intro_to_IB_for_End_Users.pdf)
+*	[Mellanox InfiniBandFAQ_FQ_100.pdf](http://www.mellanox.co m/pdf/whitepapers/InfiniBandFAQ_FQ_100.pdf)
+*	[Mellanox WP_2007_IB_Software_and_Protocols.pdf](http://www.mellanox.com/pdf/whitepapers/WP_2007_IB_Software_and_Protocols.pdf)
+*	Mellanox的驱动和固件可以在Mellanox的技术网站上下载：[http://www.mellanox.com](http://www.mellanox.com)
+
+###3 
