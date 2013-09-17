@@ -254,4 +254,13 @@ RDS ULPs。存储型的应用可以利用iSER,SRP,RDS,NFS,ZFS,SMB等等。MPI和
 *	[Mellanox WP_2007_IB_Software_and_Protocols.pdf](http://www.mellanox.com/pdf/whitepapers/WP_2007_IB_Software_and_Protocols.pdf)
 *	Mellanox的驱动和固件可以在Mellanox的技术网站上下载：[http://www.mellanox.com](http://www.mellanox.com)
 
-###3 
+###2 RDMA编程思想概述
+VPI架构允许在用户态下直接对硬件进行访问。Mellanox提供了一个动态链接库，通过verbs的API
+对硬件进行访问。本文档包含verbs和与之相关的输出、输出、描述和被暴露在操作系统编程接口的
+功能。
+
+>标注：此编程手册和它的verbs仅会对于用户态，如果想查看内核态的verbs，可以查看头文件。
+
+使用verbs进行编程可以定制和优化支持RDMA的网络程序。这种定制和优化只有对VPI系统有着丰富
+知识和经验的程序员才能胜任。
+
